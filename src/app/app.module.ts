@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { LoginComponent } from './Pantallas/login/login.component'; // Asegúrate de que la ruta sea correcta
 
 @Component({
@@ -7,7 +6,7 @@ import { LoginComponent } from './Pantallas/login/login.component'; // Asegúrat
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [RouterModule, LoginComponent] // Importa RouterModule aquí
+  imports: [LoginComponent]
 })
 export class AppComponent {
   title: string = 'My App';
