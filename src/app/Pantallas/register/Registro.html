@@ -5,61 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <style>
-        body {
+        .body, html {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #4a4a4a;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .login-container {
-            background-color: rgb(192, 186, 28);
-            padding: 50px;
+            background-color: #0f172a;
+            padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
-            height: 500px;
-
+            max-width: 100%;
+            text-align: center; /* Alinea el contenido al centro */
         }
         .login-container h2 {
             margin-bottom: 20px;
-            text-align: center;
+            color: #64748b;
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
-            width: 100%;
+            width: calc(100% - 40px);
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #0c6f93;
+            border: 1px solid #475569;
             border-radius: 4px;
+            background-color: #1e293b;
+            color: #94a3b8;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .login-container input[type="text"]::placeholder,
+        .login-container input[type="password"]::placeholder {
+            color: #64748b;
+            opacity: 0.8;
         }
         .login-container input[type="submit"] {
-            width: 100%;
+            width: calc(100% - 40px);
             padding: 10px;
-            background-color: #b80000;
+            background-color: #4f46e5;
             border: none;
-            color: rgb(160, 157, 161);
+            color: white;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
         }
         .login-container input[type="submit"]:hover {
-            background-color: #04e134;
+            background-color: #4338ca;
         }
         .login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2e0594;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-.login-container button:hover {
-    background-color: #45a049; 
-}
-
+            width: calc(100% - 40px);
+            padding: 10px;
+            background-color: #2e0594;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -69,16 +85,8 @@
             <input type="text" name="username" placeholder="Nombre" required>
             <input type="text" name="mail" placeholder="Correo" required>
             <input type="password" name="password" placeholder="Contraseña" required>
-
-
             <input type="submit" value="Registrarse">
-            <button type="button" id="loginBtn">Volver al inicio de sesion</button>
-            <script>
-                document.getElementById('loginBtn').addEventListener('click', function() {
-                    window.location.href = 'login.html';
-                });
-            </script>
-    
+            <button type="button" (click)="goToLogin()">Volver al inicio de sesión</button>
         </form>
     </div>
 </body>
