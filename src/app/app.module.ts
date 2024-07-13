@@ -7,10 +7,12 @@ import { HttpClient } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Pantallas/login/login.component'; 
 import { RegisterComponent } from './Pantallas/register/register.component'; 
+import { HomeHtmlComponent } from './Pantallas/home/home.html/home.html.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'home', component: HomeHtmlComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
