@@ -81,10 +81,10 @@
 <body>
     <div class="login-container">
         <h2>Pon tus datos aquí para registrarte</h2>
-        <form action="/login" method="post">
-            <input type="text" name="username" placeholder="Nombre" required>
-            <input type="text" name="mail" placeholder="Correo" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
+        <form (ngSubmit)="register()">
+            <input type="text" [(ngModel)]="username" name="username" placeholder="Nombre" required>
+            <input type="text" [(ngModel)]="mail" name="mail" placeholder="Correo" required>
+            <input type="password" [(ngModel)]="password"  name="password" placeholder="Contraseña" required>
             <input type="submit" value="Registrarse">
             <button type="button" (click)="goToLogin()">Volver al inicio de sesión</button>
         </form>

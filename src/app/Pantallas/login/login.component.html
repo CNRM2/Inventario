@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
     <style>
-        .body, html {
+        body, html {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,7 +24,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center; /* Centers the text and form elements inside the container */
+            text-align: center;
         }
         .login-container h2 {
             margin-bottom: 20px;
@@ -33,7 +33,7 @@
         }
         .login-container input[type="email"],
         .login-container input[type="password"] {
-            width: calc(100% - 20px); /* Ajusta el ancho para compensar el padding */
+            width: calc(100% - 20px);
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #475569;
@@ -43,7 +43,7 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             font-size: 14px;
             outline: none;
-            box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+            box-sizing: border-box;
         }
         .login-container input[type="email"]::placeholder,
         .login-container input[type="password"]::placeholder {
@@ -91,7 +91,7 @@
         .login-container button:hover {
             background-color: #45a049;
         }
-        text{
+        text {
             color: white;
         }
     </style>
@@ -100,9 +100,9 @@
     <div class="login-container">
         <h2>Bienvenido de vuelta</h2>
         <p style="color: white;">Ingresa tu correo y contraseña para acceder.</p>
-        <form action="/login" method="post">
-            <input type="email" name="username" placeholder="Correo" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
+        <form (ngSubmit)="login()">
+            <input type="email" [(ngModel)]="username" name="username" placeholder="Usuario" required>
+            <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Iniciar Sesión</button>
         </form>
         <a href="#">¿Olvidaste tu contraseña?</a>
