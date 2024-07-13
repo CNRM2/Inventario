@@ -1,0 +1,106 @@
+<p>home.html works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Página</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #4a4a4a; /*Fondo de detras del menu*/
+            color: white; 
+        }
+        header {
+            background-color: #3716BC; 
+            text-align: center;
+            padding: 1em;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            flex: 1;
+        }
+        nav {
+            background-color: #000734; 
+            width: 230px;
+            padding: 1em;
+            position: fixed;
+            height: 580px;
+            top: 80px; 
+            left: 20px; /* Margen a la izquierda */
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        section {
+            background-color: #4a4a4a; /* Color del fondo del contenido */
+            flex: 1;
+            padding: 1em;
+            margin-left: 290px; 
+        }
+        footer {
+            background-color: #0f172a;
+            text-align: center;
+            padding: 1em;
+            color: white;
+        }
+        h1, h2, p {
+            margin: 0.5em 0;
+        }
+        ul {
+            padding-left: 20px; /* Ajusta la sangría de la lista */
+        }
+        nav h2 {
+            color: #64748b;
+        }
+        nav ul li {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+        nav ul li a {
+            color: #027362;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Encabezado
+    </header>
+    <main>
+        <nav>
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+            </ul>
+            <h2>Sección 2</h2>
+            <ul>
+                <li><a href="#">Enlace 4</a></li>
+                <li><a href="#">Enlace 5</a></li>
+                <li><a href="#">Enlace 6</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Contenido</h2>
+            <p>Este es el área de contenido.</p>
+        </section>
+    </main>
+    <footer>
+        Pie de página
+    </footer>
+</body>
+</html>
