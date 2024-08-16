@@ -25,7 +25,20 @@ export class LoginComponent implements OnInit {
     this.authService.login({ username: this.username, password: this.password })
       .subscribe({
         next: (response) => {
-          this.router.navigate(['/home']);
+          // Guarda la respuesta en el almacenamiento local
+          localStorage.setItem('user', JSON.stringify(response));
+
+          // Redirige según el rol del usuario
+          const user = response;
+          if (user.rol === 'Administrador') {
+            this.router.navigate(['/admin-home']);
+          } else if (user.rol === 'Supervisor') {
+            this.router.navigate(['/supervisor-home']);
+          } else if (user.rol === 'Empleado') {
+            this.router.navigate(['/employee-home']);
+          } else {
+            this.router.navigate(['/home']); // Ruta por defecto
+          }
           console.log('Login successful', response);
         },
         error: (error) => {
@@ -38,4 +51,3 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/register']);
   }
 }
-  
