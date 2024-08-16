@@ -88,7 +88,7 @@ table th, table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 table th {
@@ -114,3 +114,17 @@ button i {
     font-size: 1.2em;
     margin-right: 5px;
 }
+
+.btn-group {
+    display: flex;
+    gap: 5px; /* Espacio entre botones */
+  }
+  
+  .btn-group .btn {
+    margin-right: 5px; /* Espacio entre botones */
+  }
+  
+  /* Asegura que la tabla ocupe todo el ancho disponible */
+  table {
+    width: 100%;
+  }
