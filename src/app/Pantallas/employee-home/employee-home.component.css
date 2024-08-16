@@ -1,0 +1,10 @@
+/* Estilos específicos para EmployeeHomeComponent */
+.container {
+    padding: 20px;
+    background-color: #f1f3f5;
+    border-radius: 5px;
+  }
+  h1 {
+    color: #28a745;
+  }
+  
